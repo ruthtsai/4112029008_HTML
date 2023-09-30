@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			i = 0;
+			x = [ "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/8806728_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/3293406_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/7805694_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/4967652_orig.png",
+                  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/1192195_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/8375348_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/9744731_orig.png",
+				  "https://mario-family.weebly.com/uploads/2/7/4/1/27417881/2140698_orig.png"]
+				  
+				  
+			function f(y)
+			{
+				i = (i + y + x.length)%x.length; <!--用餘數來確保i值都在list中，又多加上x.length是為了讓餘數恆正-->
+				
+				
+				document.getElementById("demo").innerHTML = "<img src='" + x[i] + "' width='25%'>" 
+			}
+		</script>
+	</head>
+
+<body>
+<a href="javascript:f(-1);">上一張</a>
+<a href="javascript:f(1);">下一張</a>
+<div id="demo">
+	<img src='https://mario-family.weebly.com/uploads/2/7/4/1/27417881/8806728_orig.png' width='25%'>
+</div>
+
+
+</body>
+</html>
